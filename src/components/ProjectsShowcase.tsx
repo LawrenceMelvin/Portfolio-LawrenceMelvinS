@@ -10,6 +10,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import insuranceTrackerImage from "/images/insurance-tracker logged.jpg";
 
 interface Project {
   title: string;
@@ -18,6 +19,8 @@ interface Project {
   techStack: string[];
   liveUrl?: string;
   githubUrl?: string;
+  githubFrontendUrl?: string;
+  githubBackendUrl?: string;
 }
 
 interface ProjectsShowcaseProps {
@@ -30,11 +33,12 @@ const ProjectsShowcase = ({
       title: "Insurance Tracker",
       description:
         "Full-stack React + Spring Boot app to manage health, term & auto insurance. PostgreSQL backend, with secure registration and google Oauth2 login, renewal reminders and dashboard.",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+      image: insuranceTrackerImage,
       techStack: ["React", "Spring Boot", "PostgreSQL", "OAuth2"],
       liveUrl: "https://www.insuretracks.com",
-      githubUrl: "https://github.com/LawrenceMelvin/Insurance-Tracker",
+      githubFrontendUrl:
+        "https://github.com/LawrenceMelvin/Insurance-Tracker-Frontend",
+      githubBackendUrl: "https://github.com/LawrenceMelvin/Insurance-Tracker",
     },
     {
       title: "BachatPlan - Simple Saving App",
@@ -44,7 +48,9 @@ const ProjectsShowcase = ({
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
       techStack: ["React", "Flask"],
       liveUrl: "https://bachatplan.netlify.app/",
-      githubUrl: "https://github.com/LawrenceMelvin/SmartInvest-Backend",
+      githubFrontendUrl:
+        "https://github.com/LawrenceMelvin/BachatPlan-Frontend",
+      githubBackendUrl: "https://github.com/LawrenceMelvin/SmartInvest-Backend",
     },
     {
       title: "AWS Transcriber",
@@ -60,7 +66,8 @@ const ProjectsShowcase = ({
       image:
         "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
       techStack: ["Flask", "Docker", "AWS", "Jenkins"],
-      githubUrl: "https://github.com/LawrenceMelvin/FlaskBlog-Thing-I-Do/tree/master",
+      githubUrl:
+        "https://github.com/LawrenceMelvin/FlaskBlog-Thing-I-Do/tree/master",
     },
     {
       title: "Heart Attack Risk Prediction",
@@ -112,18 +119,48 @@ const ProjectsShowcase = ({
               </CardContent>
 
               <CardFooter className="flex justify-between pt-2">
-                {project.githubUrl && (
-                  <Button variant="outline" size="sm" asChild>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </a>
-                  </Button>
-                )}
+                <div className="flex gap-2">
+                  {project.githubFrontendUrl && (
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href={project.githubFrontendUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="mr-2 h-4 w-4" />
+                        Frontend
+                      </a>
+                    </Button>
+                  )}
+
+                  {project.githubBackendUrl && (
+                    <Button variant="outline" size="sm" asChild>
+                      <a
+                        href={project.githubBackendUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="mr-2 h-4 w-4" />
+                        Backend
+                      </a>
+                    </Button>
+                  )}
+
+                  {project.githubUrl &&
+                    !project.githubFrontendUrl &&
+                    !project.githubBackendUrl && (
+                      <Button variant="outline" size="sm" asChild>
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="mr-2 h-4 w-4" />
+                          Code
+                        </a>
+                      </Button>
+                    )}
+                </div>
 
                 {project.liveUrl && (
                   <Button size="sm" asChild>
