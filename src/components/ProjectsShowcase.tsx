@@ -34,7 +34,17 @@ const ProjectsShowcase = ({
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
       techStack: ["React", "Spring Boot", "PostgreSQL", "OAuth2"],
       liveUrl: "https://www.insuretracks.com",
-      githubUrl: "https://github.com/LawrenceMelvin",
+      githubUrl: "https://github.com/LawrenceMelvin/Insurance-Tracker",
+    },
+    {
+      title: "BachatPlan - Simple Saving App",
+      description:
+        "Full-stack React + Spring Boot app to manage personal finances.",
+      image:
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+      techStack: ["React", "Flask"],
+      liveUrl: "https://bachatplan.netlify.app/",
+      githubUrl: "https://github.com/LawrenceMelvin/SmartInvest-Backend",
     },
     {
       title: "AWS Transcriber",
@@ -42,7 +52,7 @@ const ProjectsShowcase = ({
       image:
         "https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?w=800&q=80",
       techStack: ["AWS S3", "AWS Transcribe", "Python"],
-      githubUrl: "https://github.com/LawrenceMelvin",
+      githubUrl: "https://github.com/LawrenceMelvin/AWS-Transcriber",
     },
     {
       title: "Things I Do Blog",
@@ -50,7 +60,7 @@ const ProjectsShowcase = ({
       image:
         "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
       techStack: ["Flask", "Docker", "AWS", "Jenkins"],
-      githubUrl: "https://github.com/LawrenceMelvin",
+      githubUrl: "https://github.com/LawrenceMelvin/FlaskBlog-Thing-I-Do/tree/master",
     },
     {
       title: "Heart Attack Risk Prediction",
@@ -58,7 +68,7 @@ const ProjectsShowcase = ({
       image:
         "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
       techStack: ["Python", "Scikit-learn", "Random Forest"],
-      githubUrl: "https://github.com/LawrenceMelvin",
+      githubUrl: "https://github.com/LawrenceMelvin/Heart-Disease-risk-",
     },
   ],
 }: ProjectsShowcaseProps) => {
