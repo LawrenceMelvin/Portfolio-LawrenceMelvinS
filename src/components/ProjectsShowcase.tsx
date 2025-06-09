@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import insuranceTrackerImage from "/images/insurance-tracker logged.jpg";
+import bachatplanImage from "/images/bachatplan.jpg";
 
 interface Project {
   title: string;
@@ -44,8 +45,7 @@ const ProjectsShowcase = ({
       title: "BachatPlan - Simple Saving App",
       description:
         "Full-stack React + Spring Boot app to manage personal finances.",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+      image: bachatplanImage,
       techStack: ["React", "Flask"],
       liveUrl: "https://bachatplan.netlify.app/",
       githubFrontendUrl:
