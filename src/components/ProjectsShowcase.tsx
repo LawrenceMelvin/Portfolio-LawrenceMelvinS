@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import insuranceTrackerImage from "/images/insurance-tracker logged.jpg";
+import flaskimage from "/images/flaskimage.jpg";
 import bachatplanImage from "/images/bachatplan.jpg";
 
 interface Project {
@@ -63,9 +64,9 @@ const ProjectsShowcase = ({
     {
       title: "Things I Do Blog",
       description: "Flask blog with Dockerized deployment on AWS via Jenkins.",
-      image:
-        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
+      image: flaskimage,
       techStack: ["Flask", "Docker", "AWS", "Jenkins"],
+      liveUrl: "https://thingsido-latest.onrender.com/login",
       githubUrl:
         "https://github.com/LawrenceMelvin/FlaskBlog-Thing-I-Do/tree/master",
     },
