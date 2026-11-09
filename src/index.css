@@ -71,6 +71,22 @@
       @apply border-border;
     }
     body {
-      @apply bg-background text-foreground;
+      @apply bg-[#181818] text-[#cccccc] font-sans;
     }
+  }
+
+  /* Custom Scrollbar for VS Code look */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4f4f4f;
   }
